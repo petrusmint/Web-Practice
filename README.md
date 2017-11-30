@@ -11,7 +11,7 @@
 2. Clone this repo.
     ```bash
     $ cd /c/xampp/htdocs/my-awesome-project
-    $ git@gitlab.clickablebrand.com:webbongga/wordpress-2.git
+    $ git clone git@gitlab.clickablebrand.com:webbongga/wordpress-2.git
     ```
 3. Open your newly created repo in your browser. Execute the codes under Existing Git repository.
 
