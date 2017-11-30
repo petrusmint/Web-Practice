@@ -23,7 +23,6 @@ Thumbs.db
 # ignore log files and databases
 *.log
 *.sql
-!sqldump/*.sql
 *.sqlite
 
 # ignore compiled files
@@ -50,5 +49,6 @@ core/
 content/
 !content/uploads/
 !content/themes/
+!import/*.sql
 vendor/
 wp-config.php
