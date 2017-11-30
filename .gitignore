@@ -1,4 +1,3 @@
-
 # ignore all files starting with .
 .*
 
@@ -46,9 +45,9 @@ Thumbs.db
 
 # ignore unwanted wordpress directories and files
 core/
-content/
-!content/uploads/
-!content/themes/
+content/*
+!content/themes
+!content/uploads
 !import/*.sql
 vendor/
 wp-config.php
