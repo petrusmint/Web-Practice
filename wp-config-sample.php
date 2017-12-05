@@ -84,7 +84,7 @@ define('WP_DEBUG', false);
 // Custom Content Directory
 $root = "http://".$_SERVER['HTTP_HOST'];
 $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-define( 'WP_CONTENT_URL', 'http://' . $root . 'content' );
+define( 'WP_CONTENT_URL', $root . 'content' );
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 define( 'UPLOADS', 'content/uploads' );
 
