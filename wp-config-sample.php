@@ -82,8 +82,10 @@ define('WP_DEBUG', false);
 /* That's all, stop editing! Happy blogging. */
 
 // Custom Content Directory
+$root = "http://".$_SERVER['HTTP_HOST'];
+$root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+define( 'WP_CONTENT_URL', 'http://' . $root . 'content' );
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
 define( 'UPLOADS', 'content/uploads' );
 
 /** Absolute path to the WordPress directory. */
