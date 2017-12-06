@@ -48,6 +48,7 @@ echo 'Replacing URL...'
 wp search-replace --all-tables "http://localhost/wordpress" "http://$input_url"
 
 # clone template
+mkdir content/themes
 cd content/themes
 git clone git@gitlab.clickablebrand.com:webbongga/$input_template.git
 
@@ -57,5 +58,8 @@ echo 'Installing bower components...'
 bower install
 echo 'Installing node modules...'
 npm install
+
+#remove .git folder
+rm -rf .git
 
 echo 'DONE!'
