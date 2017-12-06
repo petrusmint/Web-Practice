@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc9c59045c426f8332f1eccadc222207",
+    "content-hash": "f390c4cf3a6086fc96ab365d30077e22",
     "packages": [
         {
             "name": "composer/installers",
@@ -250,45 +250,6 @@
                 "wordpress"
             ],
             "time": "2017-05-31T18:42:33+00:00"
-        },
-        {
-            "name": "webbongga/template-basic",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@gitlab.clickablebrand.com:webbongga/template-basic.git",
-                "reference": "ac7fff1d26fd5bde2d0cc624ee41f164467e470b"
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "type": "wordpress-theme",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Word",
-                    "email": "ben@benword.com",
-                    "homepage": "https://github.com/retlehs"
-                },
-                {
-                    "name": "Scott Walkinshaw",
-                    "email": "scott.walkinshaw@gmail.com",
-                    "homepage": "https://github.com/swalkinshaw"
-                }
-            ],
-            "description": "The best WordPress starter theme with a modern front-end development workflow. Based on HTML5 Boilerplate, gulp, Bower, and Bootstrap.",
-            "homepage": "https://roots.io/sage/",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/roots/sage/issues",
-                "forum": "https://discourse.roots.io/"
-            },
-            "time": "2017-12-06T07:00:41+00:00"
         },
         {
             "name": "wpackagist-plugin/add-on-contact-form-7-mailpoet",
@@ -574,9 +535,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "webbongga/template-basic": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -21,8 +21,7 @@
         "wpackagist-plugin/user-role-editor": "*",
         "wpackagist-plugin/wck-custom-fields-and-custom-post-types-creator": "*",
         "wpackagist-plugin/wordfence": "*",
-        "wpackagist-plugin/wordpress-seo": "*",
-        "webbongga/template-basic": "dev-master"
+        "wpackagist-plugin/wordpress-seo": "*"
     },
     "repositories": [{
         "type": "composer",
