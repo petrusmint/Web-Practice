@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
+define('DB_NAME', '<DB_NAME>');
 
 /** MySQL database username */
-define('DB_USER', 'username_here');
+define('DB_USER', '<DB_USER>');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'password_here');
+define('DB_PASSWORD', '<DB_PASS>');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -82,7 +82,7 @@ define('WP_DEBUG', false);
 /* That's all, stop editing! Happy blogging. */
 
 // Custom Content Directory
-$base_url = 'http://localhost/wordpress';
+$base_url = 'http://<BASE_URL>';
 
 define( 'WP_SITEURL', $base_url . '/core' );
 define( 'WP_HOME',    $base_url );
