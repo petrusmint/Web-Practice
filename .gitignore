@@ -47,6 +47,7 @@ Thumbs.db
 core/
 content/*
 !content/themes
+content/uploads/mailpoet
 !content/uploads
 !import/*.sql
 vendor/
