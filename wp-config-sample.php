@@ -82,11 +82,12 @@ define('WP_DEBUG', false);
 /* That's all, stop editing! Happy blogging. */
 
 // Custom Content Directory
-$root = "http://".$_SERVER['HTTP_HOST'];
-$root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-define( 'WP_CONTENT_URL', $root . 'content' );
+$base_url = 'http://localhost/wordpress';
+
+define( 'WP_SITEURL', $base_url . '/core' );
+define( 'WP_HOME',    $base_url );
+define( 'WP_CONTENT_URL', $base_url . '/content' );
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'UPLOADS', 'content/uploads' );
 define( 'WP_PLUGIN_DIR', dirname( __FILE__ ) . '/content/plugins' );
 
 $plugin_url = str_replace('core/wp-admin/', '', WP_CONTENT_URL);

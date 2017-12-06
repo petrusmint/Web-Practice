@@ -257,7 +257,7 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.clickablebrand.com:webbongga/template-basic.git",
-                "reference": "95785b315b011f0d4a2f5b0c349fff8de01078c3"
+                "reference": "ac7fff1d26fd5bde2d0cc624ee41f164467e470b"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -288,7 +288,7 @@
                 "issues": "https://github.com/roots/sage/issues",
                 "forum": "https://discourse.roots.io/"
             },
-            "time": "2017-11-29T08:57:23+00:00"
+            "time": "2017-12-06T07:00:41+00:00"
         },
         {
             "name": "wpackagist-plugin/add-on-contact-form-7-mailpoet",
@@ -432,15 +432,15 @@
         },
         {
             "name": "wpackagist-plugin/mailpoet",
-            "version": "3.2.3",
+            "version": "3.2.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailpoet/",
-                "reference": "tags/3.2.3"
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailpoet.3.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/mailpoet.zip?timestamp=1512493037",
                 "reference": null,
                 "shasum": null
             },
@@ -532,15 +532,15 @@
         },
         {
             "name": "wpackagist-plugin/wordfence",
-            "version": "6.3.21",
+            "version": "6.3.22",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordfence/",
-                "reference": "tags/6.3.21"
+                "reference": "tags/6.3.22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.21.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.22.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -552,15 +552,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "5.8",
+            "version": "5.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/5.8"
+                "reference": "tags/5.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.9.1.zip",
                 "reference": null,
                 "shasum": null
             },
