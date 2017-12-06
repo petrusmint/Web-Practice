@@ -26,14 +26,7 @@
     
 4. Update the composer.json.
 
-5. Install all dependencies.
+5. Run install.sh and relax!
     ```bash
-    $ composer update
+    $ ./install.sh
     ```
-
-6. Create wp-config.php and update the db credentials, authentication unique keys and salts.
-    ```bash
-    $ cd wordpress-2
-    $ cp wp-config-sample.php wp-config.php
-    ````
-    Visit https://api.wordpress.org/secret-key/1.1/salt/ to update authentication unique keys and salts.
