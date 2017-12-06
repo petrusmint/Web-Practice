@@ -87,6 +87,10 @@ $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME'
 define( 'WP_CONTENT_URL', $root . 'content' );
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 define( 'UPLOADS', 'content/uploads' );
+define( 'WP_PLUGIN_DIR', dirname( __FILE__ ) . '/content/plugins' );
+
+$plugin_url = str_replace('core/wp-admin/', '', WP_CONTENT_URL);
+define( 'WP_PLUGIN_URL', $plugin_url . '/plugins');
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
