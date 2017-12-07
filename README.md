@@ -1,13 +1,14 @@
 # Requirements
++ nodejs <= 6.12
 + composer
 + wp-cli
 
 
 # Instructions
 1. Create a new project. Read the official [How to create a project in GitLab](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+    * Change the project path to **webbongga**
+    * Set visibility level to **public**
 
-    Please make sure the visibility level is set to public.
-    
 2. Clone this repo.
     ```bash
     $ cd /c/xampp/htdocs/my-awesome-project
