@@ -7,6 +7,9 @@
 # track readme.md in the root (i.e. do NOT ignore it)
 !readme.md
 
+# track .htaccess
+!.htaccess
+
 # ignore all files that start with ~
 ~*
 
@@ -45,10 +48,10 @@ Thumbs.db
 
 # ignore unwanted wordpress directories and files
 core/
-content/*
-!content/themes
-content/uploads/mailpoet
-!content/uploads
+content/
+!content/themes/
+content/uploads/
+!content/uploads/
 !import/*.sql
 vendor/
 wp-config.php
