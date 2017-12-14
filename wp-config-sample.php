@@ -88,10 +88,6 @@ define( 'WP_SITEURL', $base_url . '/core' );
 define( 'WP_HOME',    $base_url );
 define( 'WP_CONTENT_URL', $base_url . '/content' );
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_PLUGIN_DIR', dirname( __FILE__ ) . '/content/plugins' );
-
-$plugin_url = str_replace('core/wp-admin/', '', WP_CONTENT_URL);
-define( 'WP_PLUGIN_URL', $plugin_url . '/plugins');
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
