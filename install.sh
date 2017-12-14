@@ -2,9 +2,9 @@
 
 
 root=$(pwd);
+currentDir=${PWD##*/}  
 
-read -p "Please enter site url (without http/s):" input_url
-[ -z "$input_url" ] && exit;
+url="localhost/$currentDir"
 
 read -p "Please enter db name: " input_db_name
 [ -z "$input_db_name" ] && exit;
@@ -15,8 +15,8 @@ read -p "Please enter db user: " input_db_user
 # No need to check if password is empty
 read -p "Please enter db pass: " input_db_pass
 
-read -p "Please enter template name (template-basic): " input_template
-[ -z "$input_template" ] && exit;
+read -p "Please enter template name (default template-basic): " input_template
+input_template=${input_template:-template-basic}
 
 # Run composer
 composer update
@@ -25,7 +25,7 @@ composer update
 cp wp-config-sample.php  wp-config.php
 
 # Replace database credentials
-sed -i -e "s:<BASE_URL>:$input_url:g" wp-config.php
+sed -i -e "s:<BASE_URL>:$url:g" wp-config.php
 sed -i -e "s:<DB_NAME>:$input_db_name:g" wp-config.php
 sed -i -e "s:<DB_USER>:$input_db_user:g" wp-config.php
 sed -i -e "s:<DB_PASS>:$input_db_pass:g" wp-config.php
