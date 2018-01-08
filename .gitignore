@@ -48,7 +48,7 @@ Thumbs.db
 
 # ignore unwanted wordpress directories and files
 core/
-content/
+content/*
 !content/themes/
 content/uploads/
 !content/uploads/
