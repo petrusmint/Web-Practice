@@ -10,6 +10,8 @@
     ```bash
     $ git clone git@gitlab.clickablebrand.com:webbongga/wordpress-2.git my-folder
     ```
+    Replace **git@gitlab.clickablebrand.com:webbongga/wordpress-2.git** with the exact address.
+    
     Replace **my-folder** with the project name.
     
 5. Update the composer.json if needed.
