@@ -15,8 +15,8 @@ read -p "Please enter db user: " input_db_user
 # No need to check if password is empty
 read -p "Please enter db pass: " input_db_pass
 
-read -p "Please enter template name (default template-basic): " input_template
-input_template=${input_template:-template-basic}
+read -p "Please enter template name: " input_template
+input_template=${input_template:-litfire}
 
 # Run composer
 composer update
@@ -50,7 +50,7 @@ wp search-replace --all-tables "http://localhost/wordpress" "http://$input_url"
 # clone template
 mkdir content/themes
 cd content/themes
-git clone git@gitlab.clickablebrand.com:webbongga/$input_template.git
+git clone git@gitlab.clickablebrand.com:webbongga/template-basic.git $input_template
 
 # install bower and npm 
 cd $input_template
