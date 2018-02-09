@@ -9,7 +9,6 @@
         "php": ">=5.6",
         "johnpbloch/wordpress": "^4.8",
         "wpackagist-plugin/autoptimize": "*",
-        "wpackagist-plugin/bwp-recaptcha": "*",
         "wpackagist-plugin/contact-form-7": "*",
         "wpackagist-plugin/contact-form-cfdb7": "*",
         "wpackagist-plugin/add-on-contact-form-7-mailpoet": "*",
