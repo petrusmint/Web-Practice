@@ -1,6 +1,11 @@
 # ignore all files starting with .
 .*
 
+# track files starting  with .
+!.gitkeep
+!.editorconfig
+!.eslintrc.js
+
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
 
