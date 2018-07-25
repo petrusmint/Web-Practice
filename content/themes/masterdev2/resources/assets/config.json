@@ -6,6 +6,10 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "aos": [
+      "./scripts/aos.js",
+      "./styles/aos.css"
     ]
   },
   "publicPath": "/content/themes/masterdev2",
