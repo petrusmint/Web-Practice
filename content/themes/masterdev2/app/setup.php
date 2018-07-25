@@ -19,8 +19,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/aos.js', 'https://unpkg.com/aos@next/dist/aos.js', null, null, true);
     wp_add_inline_script('sage/aos.js', 'AOS.init({once: true, disable: window.innerWidth < 992 });');
 
-   
-    
     if( is_single() && comments_open() && get_option('thread_comments') ) {
         wp_enqueue_script('comment-reply');
     }

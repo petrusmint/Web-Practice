@@ -10,7 +10,7 @@
   			<div class="wrapper">
   				<div class="row">
   					<div class="col-md-5 align-self-md-center">
-  						<div class="img-cont text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+  						<div class="img-cont text-center" data-aos="fade-up" data-aos-duration="1000">
 							<?php
 								if(has_post_thumbnail(9)) {
 									$bannerImg = wp_get_attachment_image_src(get_post_thumbnail_id(9), 'single-post-thumbnail');
@@ -20,16 +20,14 @@
 						</div>
   					</div>
   					<div class="col-md-7 align-self-md-center">
-  						<div class="text-cont text-center" data-aos="fade-up" data-aos-duration="1000">
+  						<div class="text-cont text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
 	  						<?php
-	  							$query = new WP_Query('page_id=9');
-	  						?>
-	  						<?php 
-	  							while($query->have_posts()) : $query->the_post();
-	  								the_content();
-	  						?>
-		  					<?php endwhile;	?>
-		  					<?php wp_reset_postdata();?>
+								$content_post = get_post(9);
+								$content = $content_post->post_content;
+								$content = apply_filters('the_content', $content);
+								$content = str_replace(']]>', ']]&gt;', $content);
+								echo wpautop($content);
+							?>
 		  					<h2>Written by <?php echo bloginfo('name'); ?></h2>
 		  					<a href="<?php echo get_post_meta(9, 'buy the book now link', true); ?>" target="_blank" class="btn-style buy-book"><?php echo get_post_meta(9, 'buy the book now', true); ?></a>
 		  				</div>
@@ -142,8 +140,7 @@
 					<div class="col-md-8">
 						<div class="text-cont" data-aos="fade-up" data-aos-duration="1000">
 							<?php
-								$book_post = 11;
-								$content_post = get_post($book_post);
+								$content_post = get_post(11);
 								$content = $content_post->post_content;
 								$content = apply_filters('the_content', $content);
 								$content = str_replace(']]>', ']]&gt;', $content);
@@ -167,8 +164,7 @@
 	            <div class="text-cont text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                     <h2><?php echo get_the_title(13); ?></h2>
                     <?php
-						$author_post = 13;
-						$content_post = get_post($author_post);
+						$content_post = get_post(13);
 						$content = $content_post->post_content;
 						$content = apply_filters('the_content', $content);
 						$content = str_replace(']]>', ']]&gt;', $content);
@@ -230,8 +226,7 @@
 							<h2><?php echo get_the_title(15); ?></h2>
 							<h3><strong>Excerpt Content Only</strong></h3>
 							<?php
-								$order_post = 15;
-								$content_post = get_post($order_post);
+								$content_post = get_post(15);
 								$content = $content_post->post_content;
 								$content = apply_filters('the_content', $content);
 								$content = str_replace(']]>', ']]&gt;', $content);
@@ -240,39 +235,6 @@
 						</div>
 						<div class="excerpt-carousel" data-aos="fade-up" data-aos-duration="1000">
 							<h3><strong>Excerpt Content Carousel</strong></h3>
-							<div id="excerpt-carou" class="carousel slide" data-ride="carousel" data-interval="false">
-								<?php
-									$excerpt = get_post_meta(15, 'excerpt_content', true);
-								?>
-								<div class="carousel-inner">
-									<?php
-										$count = 0;
-										$status= '';
-										$carouIn = '<ol class="carousel-indicators">';
-										foreach ( $excerpt as $excerpts ) :
-											if($count == 0)
-							               {
-							                  $status = 'active';
-							               }
-							               else{
-							                  $status = '';
-							               }
-											$carouIn.= '<li data-target="#excerpt-carou" data-slide-to="'.$count.'" class="'.$status.'"></li>';
-											echo '<div class="carousel-item '.$status.'">
-													'.wpautop($excerpts['excerpt-content']).'
-												</div>';
-										$count++;
-										endforeach;
-										$carouIn.= '</ol>';
-									?>
-								</div>
-								<?php
-									echo $carouIn;
-								?>
-							</div>
-						</div>
-						<div class="excerpt-carousel">
-							<h3><strong>Repeatable Excerpt Content from Scratch</strong></h3>
 							<div id="excerpt-carou2" class="carousel slide" data-ride="carousel" data-interval="false">
 								<?php
 									$contents = get_post_meta(15,'repeatable_editor_repeatable_editor_content',true );
@@ -321,8 +283,7 @@
 					<div class="text-social-cont" data-aos="fade-up" data-aos-duration="1000">
 						<h2>{{ get_the_title(19) }}</h2>
 			            <?php
-							$contact_post = 19;
-							$content_post = get_post($contact_post);
+							$content_post = get_post(19);
 							$content = $content_post->post_content;
 							$content = apply_filters('the_content', $content);
 							$content = str_replace(']]>', ']]&gt;', $content);

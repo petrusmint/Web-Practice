@@ -16,14 +16,17 @@ function repeatable_editor_add_meta_box() {
 	/*if (isset($_wp_post_type_features['page']['editor']) && $_wp_post_type_features['page']['editor']) {
 		unset($_wp_post_type_features['page']['editor']);
 	}*/
-	add_meta_box(
-		'repeatable_editor-repeatable-editor',
-		__( 'Repeatable Editor', 'repeatable_editor' ),
-		'repeatable_editor_repeatable_editor_html',
-		'page',
-		'normal',
-		'high'
-	);
+	$slug = basename( get_permalink( $post->ID ) );
+    if ( 'excerpts' == $slug || 'order' == $slug) {
+		add_meta_box(
+			'repeatable_editor-repeatable-editor',
+			__( 'Repeatable Editor', 'repeatable_editor' ),
+			'repeatable_editor_repeatable_editor_html',
+			'page',
+			'normal',
+			'high'
+		);
+	}
 }
 add_action( 'add_meta_boxes', 'repeatable_editor_add_meta_box', 0 );
 

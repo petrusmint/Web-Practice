@@ -29,4 +29,10 @@ function wpdocs_special_nav_class( $args, $item, $depth ) {
 }
 add_filter( 'nav_menu_item_args' , __NAMESPACE__ . '\\wpdocs_special_nav_class' , 10, 3 ); 
 
+/* for custom search layout*/
+
+add_filter('get_search_form', function () {
+  return \App\template( 'partials.searchform' );
+});
+
 

@@ -13,11 +13,13 @@
                     <div class="img-cont2">
                         <?php 
                             $author_pageID = 13;
-                            $authorFields = get_post_meta($author_pageID, 'md-custom-image', true );
+                            $authorFields = get_post_meta( $author_pageID, 'custom_image_field', true );
                         ?>
-                        <?php if (!empty($authorFields)): ?>
-                            <img src="<?php echo $authorFields ; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" class="hidden">
-                        <?php endif; ?>       
+                        <?php
+                            if(!empty($authorFields['custom-image-field'])){
+                                echo '<img class="hidden" src="'.$authorFields['custom-image-field'].'" alt="litfire"/>';
+                            }   
+                        ?>
                     </div>
                 </div>
                 <div class="text-cont">

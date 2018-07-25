@@ -69,8 +69,4 @@ add_filter('comments_template', function ($comments_template) {
     return template_path(locate_template(["views/{$comments_template}", $comments_template]) ?: $comments_template);
 }, 100);
 
-add_filter('get_search_form', function(){  
-  $form = '';  
-    echo template(realpath(get_template_directory() . '/views/partials/searchform.blade.php'), []);  
-  return $form;  
-});
+

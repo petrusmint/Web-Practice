@@ -1,125 +1,110 @@
 <?php
 
-class customimageMetabox {
-	private $screen = array(
-		'page',
-	);
-	private $meta_fields = array(
-		array(
-			'label' => 'Custom Image',
-			'id' => 'md-custom-image',
-			'type' => 'media',
-		),
-	);
-	public function __construct() {
-		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
-		add_action( 'admin_footer', array( $this, 'media_fields' ) );
-		add_action( 'save_post', array( $this, 'save_fields' ) );
-	}
-	public function add_meta_boxes() {
-		foreach ( $this->screen as $single_screen ) {
-			add_meta_box(
-				'customimage',
-				__( 'Custom Image', 'textdomain' ),
-				array( $this, 'meta_box_callback' ),
-				$single_screen,
-				'advanced',
-				'default'
-			);
-		}
-	}
-	public function meta_box_callback( $post ) {
-		wp_nonce_field( 'customimage_data', 'customimage_nonce' );
-		$this->field_generator( $post );
-	}
-	public function media_fields() {
-		?><script>
-			jQuery(document).ready(function($){
-				if ( typeof wp.media !== 'undefined' ) {
-					var _custom_media = true,
-					_orig_send_attachment = wp.media.editor.send.attachment;
-					$('.customimage-media').click(function(e) {
-						var send_attachment_bkp = wp.media.editor.send.attachment;
-						var button = $(this);
-						var id = button.attr('id').replace('_button', '');
-						_custom_media = true;
-							wp.media.editor.send.attachment = function(props, attachment){
-							if ( _custom_media ) {
-								$('input#'+id).val(attachment.url);
-							} else {
-								return _orig_send_attachment.apply( this, [props, attachment] );
-							};
-						}
-						wp.media.editor.open(button);
-						return false;
-					});
-					$('.add_media').on('click', function(){
-						_custom_media = false;
-					});
-				}
-			});
-		</script><?php
-	}
-	public function field_generator( $post ) {
-		$output = '';
-		foreach ( $this->meta_fields as $meta_field ) {
-			$label = '<label for="' . $meta_field['id'] . '">' . $meta_field['label'] . '</label>';
-			$meta_value = get_post_meta( $post->ID, $meta_field['id'], true );
-			if ( empty( $meta_value ) ) {
-				$meta_value = $meta_field['default']; }
-			switch ( $meta_field['type'] ) {
-				case 'media':
-					$input = sprintf(
-						'<input style="width: 80%%" id="%s" name="%s" type="text" value="%s"> <input style="width: 19%%" class="button customimage-media" id="%s_button" name="%s_button" type="button" value="Upload" />',
-						$meta_field['id'],
-						$meta_field['id'],
-						$meta_value,
-						$meta_field['id'],
-						$meta_field['id']
-					);
-					break;
-				default:
-					$input = sprintf(
-						'<input %s id="%s" name="%s" type="%s" value="%s">',
-						$meta_field['type'] !== 'color' ? 'style="width: 100%"' : '',
-						$meta_field['id'],
-						$meta_field['id'],
-						$meta_field['type'],
-						$meta_value
-					);
-			}
-			$output .= $this->format_rows( $label, $input );
-		}
-		echo '<table class="form-table"><tbody>' . $output . '</tbody></table>';
-	}
-	public function format_rows( $label, $input ) {
-		return '<tr><th>'.$label.'</th><td>'.$input.'</td></tr>';
-	}
-	public function save_fields( $post_id ) {
-		if ( ! isset( $_POST['customimage_nonce'] ) )
-			return $post_id;
-		$nonce = $_POST['customimage_nonce'];
-		if ( !wp_verify_nonce( $nonce, 'customimage_data' ) )
-			return $post_id;
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
-			return $post_id;
-		foreach ( $this->meta_fields as $meta_field ) {
-			if ( isset( $_POST[ $meta_field['id'] ] ) ) {
-				switch ( $meta_field['type'] ) {
-					case 'email':
-						$_POST[ $meta_field['id'] ] = sanitize_email( $_POST[ $meta_field['id'] ] );
-						break;
-					case 'text':
-						$_POST[ $meta_field['id'] ] = sanitize_text_field( $_POST[ $meta_field['id'] ] );
-						break;
-				}
-				update_post_meta( $post_id, $meta_field['id'], $_POST[ $meta_field['id'] ] );
-			} else if ( $meta_field['type'] === 'checkbox' ) {
-				update_post_meta( $post_id, $meta_field['id'], '0' );
-			}
-		}
-	}
+function add_custom_image_field_meta_box() {
+    add_meta_box(
+        'custom_image_field_meta_box', // $id
+        'Custom Image', // $title
+        'show_custom_image_field_meta_box', // $callback
+        'page', // $screen
+        'normal', // $context
+        'high' // $priority
+    );
 }
-if (class_exists('customimageMetabox')) {
-	new customimageMetabox;
-};
+add_action( 'add_meta_boxes', 'add_custom_image_field_meta_box' );
+function show_custom_image_field_meta_box() {
+    global $post;  
+    
+    $meta = get_post_meta( $post->ID, 'custom_image_field', true ); ?>
+        
+  <input type="hidden" name="your_meta_box_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
+
+ 
+
+  	<p>
+        <label for="custom_image_field[custom-image-field]">Custom Image Field</label>
+        <input type="text" name="custom_image_field[custom-image-field]" id="custom_image_field[custom-image-field]" class="meta-image regular-text" value="<?php echo isset($meta['custom-image-field']) ? $meta['custom-image-field']: ''; ?>">
+        <input type="button" class="button image-upload" value="Browse">
+    </p>
+
+    <div class="image-preview">
+        <img src="<?php echo isset($meta['custom-image-field']) ? $meta['custom-image-field'] : ''; ?>" style="max-width: 250px;">
+    </div>
+
+
+  <script>
+    jQuery( document ).ready(function($) {
+// Instantiates the variable that holds the media library frame.
+var file_frame, meta_image_preview, meta_image;
+$('.image-upload').on('click', function( event ){
+
+    meta_image_preview = $(this).parent().next('.image-preview');
+    meta_image = $(this).parent().children('.meta-image');
+    event.preventDefault();
+
+    // If the media frame already exists, reopen it.
+    if ( file_frame ) {
+        // Open frame
+        file_frame.open();
+        return;
+    }
+
+    // Create the media frame.
+    file_frame = wp.media.frames.file_frame = wp.media({
+        title: 'Select a image to upload',
+        button: {
+            text: 'Use this image',
+        },
+        multiple: false // Set to true to allow multiple files to be selected
+    });
+
+    // When an image is selected, run a callback.
+    file_frame.on( 'select', function() {
+
+        // We set multiple to false so only get one image from the uploader
+        media_attachment = file_frame.state().get('selection').first().toJSON();
+
+        // Do something with attachment.id and/or attachment.url here
+        meta_image.val(media_attachment.url);
+        
+        meta_image_preview.children('img').attr('src', media_attachment.url);
+    });
+        // Finally, open the modal
+    file_frame.open();
+
+});
+});
+  </script>
+
+  <?php }
+function save_custom_image_field_meta( $post_id ) {   
+    // verify nonce
+    if ( isset($_POST['your_meta_box_nonce']) 
+            && !wp_verify_nonce( $_POST['your_meta_box_nonce'], basename(__FILE__) ) ) {
+            return $post_id; 
+        }
+    // check autosave
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return $post_id;
+    }
+    // check permissions
+    if (isset($_POST['post_type'])) { //Fix 2
+        if ( 'page' === $_POST['post_type'] ) {
+            if ( !current_user_can( 'edit_page', $post_id ) ) {
+                return $post_id;
+            } elseif ( !current_user_can( 'edit_post', $post_id ) ) {
+                return $post_id;
+            }  
+        }
+    }
+    
+    $old = get_post_meta( $post_id, 'custom_image_field', true );
+        if (isset($_POST['custom_image_field'])) { //Fix 3
+            $new = $_POST['custom_image_field'];
+            if ( $new && $new !== $old ) {
+                update_post_meta( $post_id, 'custom_image_field', $new );
+            } elseif ( '' === $new && $old ) {
+                delete_post_meta( $post_id, 'custom_image_field', $old );
+            }
+        }
+}
+add_action( 'save_post', 'save_custom_image_field_meta' );

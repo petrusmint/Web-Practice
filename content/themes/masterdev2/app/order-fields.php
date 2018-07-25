@@ -1,14 +1,18 @@
 <?php
 
 function add_your_fields_meta_box() {
-    add_meta_box(
-        'your_fields_meta_box', // $id
-        'Order Fields', // $title
-        'show_your_fields_meta_box', // $callback
-        'page', // $screen
-        'normal', // $context
-        'high' // $priority
-    );
+    global $post;
+    $slug = basename( get_permalink( $post->ID ) );
+    if ( 'excerpts' == $slug || 'order' == $slug) {
+        add_meta_box(
+            'your_fields_meta_box', // $id
+            'Order Fields', // $title
+            'show_your_fields_meta_box', // $callback
+            'page', // $screen
+            'normal', // $context
+            'high' // $priority
+        );
+    }
 }
 add_action( 'add_meta_boxes', 'add_your_fields_meta_box' );
 function show_your_fields_meta_box() {
