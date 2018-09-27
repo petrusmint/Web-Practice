@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
   <?php while(have_posts()): ?> <?php (the_post()); ?>
 	<?php
-		$orderFields = get_post_meta( 15, 'your_fields', true );
+		$orderFields = get_post_meta( 15, 'order_fields', true );
 	?>
   	<section id="banner">
   		<div class="container">
@@ -11,8 +11,8 @@
   						<div class="img-cont text-center" data-aos="fade-up" data-aos-duration="1000">
 							<?php
 								if(has_post_thumbnail(9)) {
-									$bannerImg = wp_get_attachment_image_src(get_post_thumbnail_id(9), 'single-post-thumbnail');
-									echo '<img src="'.$bannerImg[0].'" alt="'.get_bloginfo('description').'"/>';
+									$bookImg = wp_get_attachment_image_src(get_post_thumbnail_id(9), 'single-post-thumbnail');
+									echo '<img src="'.$bookImg[0].'" alt="'.get_bloginfo('description').'"/>';
 								}
 							?>
 						</div>
@@ -26,7 +26,8 @@
 								$content = str_replace(']]>', ']]&gt;', $content);
 								echo wpautop($content);
 							?>
-		  					<h2>Written by <?php echo bloginfo('name'); ?></h2>
+
+		  					<h2>Written by <?php echo e(get_bloginfo("name", "display")); ?></h2>
 		  					<a href="<?php echo get_post_meta(9, 'buy the book now link', true); ?>" target="_blank" class="btn-style buy-book"><?php echo get_post_meta(9, 'buy the book now', true); ?></a>
 		  				</div>
   					</div>
@@ -186,41 +187,44 @@
 							</div>
 							<div class="book-type">
 								<?php
-									if(!empty($orderFields['hardback-link'])) {
-										echo '<a href="'.$orderFields['hardback-link'].'" target="_blank" class="btn-style">Hardback | '.$orderFields['hardback-price'].'</a>';
+									if(!empty($orderFields[0]['hardcover-link'])) {
+										echo '<a href="'.$orderFields[0]['hardcover-link'].'" target="_blank" class="btn-style">Hardcover | '.$orderFields[0]['hardcover-price'].'</a>';
 									}
-									if(!empty($orderFields['paperback-link'])) {
-										echo '<a href="'.$orderFields['paperback-link'].'" target="_blank" class="btn-style">Paperback | '.$orderFields['paperback-price'].'</a>';
+									if(!empty($orderFields[0]['paperback-link'])) {
+										echo '<a href="'.$orderFields[0]['paperback-link'].'" target="_blank" class="btn-style">Paperback | '.$orderFields[0]['paperback-price'].'</a>';
 									}
-									if(!empty($orderFields['ebook-link'])) {
-										echo '<a href="'.$orderFields['ebook-link'].'" target="_blank" class="btn-style">E-book | '.$orderFields['ebook-price'].'</a>';
+									if(!empty($orderFields[0]['ebook-link'])) {
+										echo '<a href="'.$orderFields[0]['ebook-link'].'" target="_blank" class="btn-style">E-book | '.$orderFields[0]['ebook-price'].'</a>';
 									}
-									if(!empty($orderFields['kindle-link'])) {
-										echo '<a href="'.$orderFields['kindle-link'].'" target="_blank" class="btn-style">Kindle | '.$orderFields['kindle-price'].'</a>';
+									if(!empty($orderFields[0]['kindle-link'])) {
+										echo '<a href="'.$orderFields[0]['kindle-link'].'" target="_blank" class="btn-style">Kindle | '.$orderFields[0]['kindle-price'].'</a>';
 									}
-									if(!empty($orderFields['nook-book-link'])) {
-										echo '<a href="'.$orderFields['nook-book-link'].'" target="_blank" class="btn-style">Nook Book | '.$orderFields['nook-book-price'].'</a>';
+									if(!empty($orderFields[0]['nook-book-link'])) {
+										echo '<a href="'.$orderFields[0]['nook-book-link'].'" target="_blank" class="btn-style">Nook Book | '.$orderFields[0]['nook-book-price'].'</a>';
 									}
 								?>
 							</div>
 							<div class="book-store">
 								<span>Available at</span>
 								<?php
-									if(!empty($orderFields['litfire-link'])) {
-										echo '<a href="'.$orderFields['litfire-link'].'" target="_blank" class="litfire"><img src="'.$orderFields['litfire-image'].'" alt="litfire"/></a>';
+									if(!empty($orderFields[0]['litfire-link'])) {
+										$litfire = wp_get_attachment_image_src( $orderFields[0]['litfire-image'], 'full', false );
+										echo '<a href="'.$orderFields[0]['litfire-link'].'" target="_blank" class="litfire"><img src="'.$litfire[0].'" alt="litfire"/></a>';
 									}
-									if(!empty($orderFields['amazon-link'])) {
-										echo '<a href="'.$orderFields['amazon-link'].'" target="_blank" class="amazon"><img src="'.$orderFields['amazon-image'].'" alt="amazon"/></a>';
+									if(!empty($orderFields[0]['amazon-link'])) {
+										$amazon = wp_get_attachment_image_src( $orderFields[0]['amazon-image'], 'full', false );
+										echo '<a href="'.$orderFields[0]['amazon-link'].'" target="_blank" class="amazon"><img src="'.$amazon[0].'" alt="amazon"/></a>';
 									}
-									if(!empty($orderFields['barnes-and-noble-link'])) {
-										echo '<a href="'.$orderFields['barnes-and-noble-link'].'" target="_blank" class="barnes"><img src="'.$orderFields['barnes-and-noble-image'].'" alt="Barnes and Noble"/></a>';
+									if(!empty($orderFields[0]['barnes-noble-link'])) {
+										$barnes = wp_get_attachment_image_src( $orderFields[0]['barnes-noble-image'], 'full', false );
+										echo '<a href="'.$orderFields[0]['barnes-noble-link'].'" target="_blank" class="barnes"><img src="'.$barnes[0].'" alt="Barnes and Noble"/></a>';
 									}
 								?>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-7">
-						<div class="excerp-content" data-aos="fade-up" data-aos-duration="1000">
+						<div class="excerpt-content" data-aos="fade-up" data-aos-duration="1000">
 							<h2><?php echo get_the_title(15); ?></h2>
 							<h3><strong>Excerpt Content Only</strong></h3>
 							<?php
@@ -235,13 +239,10 @@
 							<h3><strong>Excerpt Content Carousel</strong></h3>
 							<div id="excerpt-carou2" class="carousel slide" data-ride="carousel" data-interval="false">
 								<?php
-									$contents = get_post_meta(15,'repeatable_editor_repeatable_editor_content',true );
+									$contents = get_post_meta(15,'excerpt_content', true );
 								?>
 								<div class="carousel-inner">
 									<?php
-										if ($contents && !empty($contents)) {
-											$contents = unserialize( base64_decode( $contents ) );
-										}
 										$count = 0;
 										$status= '';
 										$carouIn = '<ol class="carousel-indicators">';
@@ -255,7 +256,7 @@
 							               }
 											$carouIn.= '<li data-target="#excerpt-carou2" data-slide-to="'.$count.'" class="'.$status.'"></li>';
 											echo '<div class="carousel-item '.$status.'">
-													'. wpautop($content) .'
+													'. $content['excerpt-content'] .'
 												</div>';
 										$count++;
 										endforeach;

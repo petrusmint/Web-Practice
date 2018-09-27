@@ -36,3 +36,15 @@ add_filter('get_search_form', function () {
 });
 
 
+add_filter('masterdev2/template/home/data', function (array $data) {
+    $data['julie'] = 'gwapa';
+    
+ //    $content_post = get_post(9);
+	// $content = $content_post->post_content;
+	// $content = apply_filters('the_content', $content);
+	// $content = str_replace(']]>', ']]&gt;', $content);
+	// $data['banner_content'] = wpautop($content);
+
+	print_r($data);
+    return $data;
+});

@@ -32,7 +32,6 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12" data-aos="fade-up-left" data-aos-duration="1500" data-aos-delay="500">
-                           
                            @include('blogsidebar')
                         </div>
                     </div>

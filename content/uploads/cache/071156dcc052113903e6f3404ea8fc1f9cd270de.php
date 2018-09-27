@@ -32,6 +32,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12" data-aos="fade-up-left" data-aos-duration="1500" data-aos-delay="500">
+                           
                            <?php echo $__env->make('blogsidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                         </div>
                     </div>

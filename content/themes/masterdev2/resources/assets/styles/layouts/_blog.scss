@@ -113,6 +113,15 @@ body.error404 {
 		margin-top: 0;
 	}
 
+	.blog-summary {
+		h3,
+		h4,
+		h5,
+		h6 {
+			display: none;
+		}
+	}
+
 	.img-cont {
 		text-align: center;
 
@@ -459,8 +468,14 @@ body.error404 {
 		    font-family: $base-font;
 		}
 
-		h3 {
+		h3,
+		h4,
+		h5,
+		h6 {
 			display: block !important;
+		}
+
+		h3 {
 			color: $base-color;
 		}
 

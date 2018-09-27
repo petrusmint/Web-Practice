@@ -13,12 +13,11 @@
                     <div class="img-cont2">
                         <?php 
                             $author_pageID = 13;
-                            $authorFields = get_post_meta( $author_pageID, 'author_field', true );
+                            $authorFields = get_post_meta( $author_pageID, 'custom_image_field', true );
                         ?>
                         <?php
-                            if(!empty($authorFields[0]['author-blog-image'])){
-                                $author = wp_get_attachment_image_src( $authorFields[0]['author-blog-image'], 'thumbnail', false );
-                                echo '<img class="hidden" src="'.$author[0].'" alt="'.get_bloginfo('name').'"/>';
+                            if(!empty($authorFields['custom-image-field'])){
+                                echo '<img class="hidden" src="'.$authorFields['custom-image-field'].'" alt="litfire"/>';
                             }   
                         ?>
                     </div>
