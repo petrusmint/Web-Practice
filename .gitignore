@@ -54,8 +54,10 @@ Thumbs.db
 # ignore unwanted wordpress directories and files
 core/
 content/*
+content/cache/
 !content/themes/
-content/uploads/
+content/uploads/cache
+content/uploads/mailpoet/
 !content/uploads/
 !import/*.sql
 vendor/
