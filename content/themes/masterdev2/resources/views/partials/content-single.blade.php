@@ -5,7 +5,7 @@ wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js')
     <div class="container">
       <div class="bg-holder">
         <div class="content-holder">
-        <h1 class="text-center">Blog</h1>
+        <h1 class="text-center">{{ get_the_title() }}</h1>
         <div class="row">
             <?php //while (have_posts()) : the_post(); ?>
             <div class="col-lg-8 col-md-12">
@@ -13,7 +13,6 @@ wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js')
                   <div class="blogpost-row blog-detail">
                      
                       <div class="text-cont">
-                           <h2>{{ get_the_title() }}</h2>
                           <div class="date-author">
                              <span class="name"><i class="fas fa-user" aria-hidden="true"></i><?php the_author();?></span>
                             <span class="date"><i class="fas fa-calendar-alt" aria-hidden="true"></i><?php echo get_the_date("F j, Y");?> </span>

@@ -9,12 +9,14 @@
                         $class="";
                         ?>
                         <div class="col-md-4 col-sm-4">
+                        <a href="<?php echo get_permalink(); ?>">
                         <div class="img-cont">
                             <?php 
                                 $featured_img_url = get_the_post_thumbnail_url($blog->ID,'full'); 
                                 echo '<img src="'.$featured_img_url.'" alt="post image"/>'
                             ?>
                         </div>
+                        </a>
                         </div>
                         <?php
                     }
