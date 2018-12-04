@@ -28,6 +28,7 @@
                             <span class="name"><i class="fas fa-user" aria-hidden="true"></i><?php the_author();?></span>
                             <span class="date"><i class="fas fa-calendar-alt" aria-hidden="true"></i><?php echo get_the_date("F j, Y");?> </span>
                         </div>
+                        <div class="blog-summary">
                         <?php
                         $content = get_the_content();
                         $content = preg_replace("/\< *[img][^\>]*[.]*\>/i","",$content,1); 
@@ -35,6 +36,7 @@
                             $content = substr($content, 0, 400).' . . . '; 
                         echo wpautop(strip_shortcodes($content));
                         ?>
+                        </div>
                         <div class="read-more-btn">
                             <a href="<?php echo get_permalink(); ?>" class="read-more">Read More</a>
                         </div>
