@@ -15,14 +15,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
-    wp_enqueue_style('sage/aos.css', 'https://unpkg.com/aos@next/dist/aos.css', false, null);
-    wp_enqueue_script('sage/aos.js', 'https://unpkg.com/aos@next/dist/aos.js', null, null, true);
-    // wp_enqueue_style('sage/aos.css', asset_path('styles/aos.css'), false, null);
-    // wp_enqueue_script('sage/aos.js', asset_path('scripts/aos.js'), null, null, true);
-
-    wp_add_inline_script('sage/aos.js', 'AOS.init({once: true, disable: window.innerWidth < 992 });');
-
-    if( is_single() && comments_open() && get_option('thread_comments') ) {
+    if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 }, 100);

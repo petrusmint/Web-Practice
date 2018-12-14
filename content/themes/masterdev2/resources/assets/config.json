@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/content/themes/masterdev2",
-  "devUrl": "http://masterdev2.local",
+  "devUrl": "http://masterdev.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
