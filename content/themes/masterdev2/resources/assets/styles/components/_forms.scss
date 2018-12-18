@@ -583,7 +583,8 @@ form#searchform {
 		input[type="checkbox"]:checked + span::before {
 			content: "\f00c";
 			color: $base-color;
-			font-family: FontAwesome, serif;
+			font-family: "Font Awesome 5 Free", serif;
+			font-weight: 600;
 			text-align: center;
 			line-height: 18px;
 		}
