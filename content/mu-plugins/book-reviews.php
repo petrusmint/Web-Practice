@@ -46,7 +46,7 @@ add_action('init', function () {
       'description'         => __('A custom post type for book reviews', 'text_domain'),
       'labels'              => $labels,
       'supports'            => ['title', 'editor', 'custom-fields', 'thumbnail'],
-      'taxonomies'          => [],
+      'taxonomies'          => ['category'],
       'hierarchical'        => false,
       'public'              => true,
       'show_ui'             => true,
