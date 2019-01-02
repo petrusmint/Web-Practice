@@ -39,7 +39,8 @@ header {
           transition: color 0.8s ease;
 
           &::before {
-            font-family: FontAwesome, sans-serif;
+            font-family: "Font Awesome 5 Free", serif;
+            font-weight: 600;
             position: absolute;
             left: 0;
             top: 0;
