@@ -23,7 +23,9 @@
                 ?>
                 <div class="col-md-8 col-sm-8 <?php echo $class; ?>"">
                     <div class="text-cont">
-                        <h2>{{ get_the_title() }}</h2>
+                        <a href="<?php echo get_permalink(); ?>">
+                            <h2>{{ get_the_title() }}</h2>
+                        </a>
                         <div class="date-author">
                             <span class="name"><i class="fas fa-user" aria-hidden="true"></i><?php the_author();?></span>
                             <span class="date"><i class="fas fa-calendar-alt" aria-hidden="true"></i><?php echo get_the_date("F j, Y");?> </span>
