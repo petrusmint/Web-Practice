@@ -6,7 +6,6 @@ function add_google_recaptcha($submit_field) {
 	$submit_field['submit_field'] = '<div class="g-recaptcha" data-sitekey="you-site-key-here"></div><br>' . $submit_field['submit_field'];
 	return $submit_field;
 }
-add_filter('comment_form_defaults','add_google_recaptcha');
 
 /** * Google recaptcha check, validate and catch the spammer
 */
@@ -34,7 +33,6 @@ function verify_google_recaptcha() {
 	else if (!is_valid_captcha($recaptcha))
 	wp_die( _("<b>Go away SPAMMER!</b>"));
 }
-add_action('pre_comment_on_post', 'verify_google_recaptcha');
 
 
 ?>
