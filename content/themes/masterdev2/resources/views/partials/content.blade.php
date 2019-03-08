@@ -10,7 +10,7 @@
 		            <div class="col-md-4">
 		            <div class="img-cont">
 		            	<a href="<?php echo get_the_permalink($post->ID); ?>">
-		                <?php the_post_thumbnail('full'); ?>
+		                <?php the_post_thumbnail('full', array('alt' => get_the_title()) ); ?>
 		            	</a>
 		            </div>
 		            </div>
