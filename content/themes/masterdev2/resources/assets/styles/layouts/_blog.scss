@@ -254,10 +254,11 @@ body.error404 {
     li {
       line-height: 30px;
       padding: 0 0 15px;
+      list-style-type: unset;
 
       ul {
         padding-top: 15px;
-        list-style-type: circle;
+        list-style-type: unset;
 
         li {
           &:last-child {
@@ -270,11 +271,11 @@ body.error404 {
 
   ol {
     padding: 0 0 0 20px;
-    list-style-type: upper-roman;
 
     li {
       line-height: 30px;
       padding: 0 0 15px;
+      list-style-type: unset;
 
       ul {
         padding: 15px 0 0 40px;
