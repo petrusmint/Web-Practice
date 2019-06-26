@@ -1,0 +1,85 @@
+#book {
+	padding: 70px 0 55px;
+
+	#BookCarousel {
+		.img-cont {
+			position: relative;
+			top: -123px;
+		}
+
+		.carousel-inner {
+			overflow: unset;
+
+			.text-cont-2 {
+				padding: 110px 0;
+			}
+
+			.text-cont {
+				h2 {
+					color: #333;
+					font-size: 40px;
+					font-family: $lora;
+					font-weight: 700;
+	
+					span {
+						color: #ff4800;
+					}
+	
+					strong {
+						color: #83a147;
+					}
+				}
+	
+				.title {
+					color: #ff4800;
+					font-family: 'Nunito', sans-serif;
+					font-size: 24px;
+					font-weight: 700;
+				}
+	
+				.title2 {
+					color: #83a147;
+					font-family: 'Nunito', sans-serif;
+					font-size: 24px;
+					font-weight: 700;
+				}
+	
+				p {
+					font-family: 'Nunito Sans', sans-serif;
+					line-height: 35px;
+				}
+			}
+		}
+
+		.carousel-indicators {
+			margin-right: 10%;
+			margin-left: 10%;
+			justify-content: left;
+
+			li {
+				background: #739341;
+				border-radius: 50%;
+				height: 15px;
+				width: 15px;
+				border-top: none;
+				border-bottom: none;
+				padding: 0;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		.img-cont {
+			margin: 0 auto 30px;
+    		width: 280px;
+		}
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding: 50px 0 35px;
+
+		.img-cont {
+			width: 230px;
+		}
+	}
+}

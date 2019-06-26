@@ -1,0 +1,822 @@
+#banner {
+  padding: 0;
+
+  .page-1 {
+    background: url("../images/bg-1.jpg");
+    background-size: cover;
+    min-height: 792px;
+    padding: 88px 0;
+
+    .img-cont {
+      width: 445px;
+      margin: 0 auto;
+    }
+
+    .text-cont {
+      .hand {
+        left: -111px;
+        position: absolute;
+        top: 28px;
+      }
+
+      h1 {
+        font-family: $papyrus;
+        color: #fff;
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 1.3;
+        padding: 0 0 35px;
+        display: block;
+        text-align: center;
+
+        span {
+          color: #ff4800;
+          font-size: 105px;
+          display: block;
+          text-align: center;
+        }
+
+        strong {
+          font-weight: normal;
+          display: block;
+        }
+      }
+
+      h2 {
+        color: $base-color;
+        font-family: $banner-font;
+        font-size: 30px;
+        padding: 0 0 55px;
+      }
+
+      .buy-book {
+        background: linear-gradient(180deg, #ff7300, #ff4800);
+        color: #fff;
+        display: inline-block;
+        font-family: Lora, serif;
+        font-weight: 700;
+        overflow: hidden;
+        text-transform: uppercase;
+        border-radius: 35px;
+        font-size: 18px;
+        height: 75px;
+        line-height: 75px;
+        padding: 0;
+        text-align: center;
+        width: 275px;
+
+        &:hover {
+          background: linear-gradient(180deg, #ff4800, #ff7300);
+        }
+      }
+    }
+  }
+
+  .page-2 {
+    background: url("../images/bg-2.jpg");
+    background-size: cover;
+    min-height: 792px;
+    padding: 150px 0;
+
+    .img-cont {
+      width: 445px;
+      margin: 0 auto;
+    }
+
+    .text-cont {
+      h1 {
+        font-family: "Open Sans", sans-serif;
+        color: #fff;
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 1.3;
+        padding: 0 0 35px;
+        display: block;
+        text-align: center;
+
+        span {
+          font-family: $papyrus;
+          color: #fff;
+          font-size: 80px;
+          display: block;
+          text-align: center;
+          padding: 10px 10px 0;
+        }
+
+        strong {
+          font-weight: normal;
+          display: block;
+        }
+      }
+
+      .buy-book {
+        background: linear-gradient(180deg, #67893c, #8eac4d);
+        color: #fff;
+        display: inline-block;
+        font-family: Lora, serif;
+        font-weight: 700;
+        overflow: hidden;
+        text-transform: uppercase;
+        border-radius: 35px;
+        font-size: 18px;
+        height: 75px;
+        line-height: 75px;
+        padding: 0;
+        text-align: center;
+        width: 275px;
+
+        &:hover {
+          background: linear-gradient(180deg, #8eac4d, #67893c);
+        }
+      }
+    }
+  }
+
+  .page-3 {
+    background: url("../images/bg-3.jpg");
+    background-size: cover;
+    min-height: 792px;
+    padding: 150px 0;
+
+    .img-cont {
+      width: 445px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: $voga;
+      font-weight: normal;
+      line-height: 1.3;
+      color: #fff;
+      font-size: 134px;
+      display: block;
+      text-align: center;
+
+      span {
+        color: #fff;
+        font-size: 70px;
+        text-align: unset;
+        display: block;
+        position: relative;
+        left: -180px;
+        bottom: -60px;
+      }
+
+      strong {
+        font-family: "Open Sans", sans-serif;
+        font-size: 31px;
+        font-weight: normal;
+        display: block;
+        position: relative;
+        left: 80px;
+        top: -25px;
+      }
+    }
+
+    .buy-book {
+      background: linear-gradient(180deg, #67893c, #8eac4d);
+      color: #fff;
+      display: inline-block;
+      font-family: Lora, serif;
+      font-weight: 700;
+      overflow: hidden;
+      text-transform: uppercase;
+      border-radius: 35px;
+      font-size: 18px;
+      height: 75px;
+      line-height: 75px;
+      padding: 0;
+      text-align: center;
+      width: 275px;
+
+      &:hover {
+        background: linear-gradient(180deg, #8eac4d, #67893c);
+      }
+    }
+  }
+
+  .page-4 {
+    background: url("../images/bg-4.jpg");
+    background-size: cover;
+    min-height: 792px;
+    padding: 130px 0;
+
+    .img-cont {
+      width: 445px;
+      margin: 0 auto;
+    }
+
+    .text-cont {
+      h1 {
+        font-family: "Arapey", serif;
+        color: #fff;
+        font-size: 64px;
+        font-weight: normal;
+        line-height: 64px;
+        display: block;
+        text-align: left;
+
+        span {
+          font-family: "Arapey", serif;
+          color: #fff;
+          font-size: 68px;
+          display: block;
+          text-align: left;
+        }
+
+        strong {
+          font-family: "Open Sans", sans-serif;
+          font-size: 28px;
+          font-weight: normal;
+          display: block;
+        }
+      }
+
+      .buy-book {
+        background: linear-gradient(180deg, #67893c, #8eac4d);
+        color: #fff;
+        display: inline-block;
+        font-family: Lora, serif;
+        font-weight: 700;
+        overflow: hidden;
+        text-transform: uppercase;
+        border-radius: 35px;
+        font-size: 18px;
+        height: 75px;
+        line-height: 75px;
+        padding: 0;
+        text-align: center;
+        width: 275px;
+        float: left;
+
+        &:hover {
+          background: linear-gradient(180deg, #8eac4d, #67893c);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+    .img-cont {
+      width: auto;
+    }
+
+    .text-cont {
+      h1 {
+        font-size: 25px;
+      }
+
+      .buy-book {
+        width: 283px;
+        height: 64px;
+        line-height: 64px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .img-cont {
+      width: 220px;
+      margin: 0 auto 30px;
+    }
+
+    .text-cont {
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .buy-book {
+        width: 290px;
+        height: 64px;
+        line-height: 64px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 50px 0;
+
+    .img-cont {
+      width: 170px;
+    }
+
+    .text-cont {
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      .buy-book {
+        width: 240px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+#owl-demo {
+  .owl-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    left: 0;
+
+    i {
+      color: #fff;
+      opacity: 0.5;
+      font-size: 40px;
+      transition: opacity 0.2s;
+    }
+
+    &:hover {
+      i {
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+    }
+  }
+
+  .owl-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    right: 0;
+
+    i {
+      color: #fff;
+      opacity: 0.5;
+      font-size: 40px;
+      transition: opacity 0.2s;
+    }
+
+    &:hover {
+      i {
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+    }
+  }
+
+  .item {
+    display: block;
+    height: auto;
+
+    img {
+      width: unset;
+      margin: 100px auto 0;
+    }
+
+    .review-1 {
+      background: url("../images/review-1.jpg");
+      background-size: cover;
+      min-height: 699px;
+
+      .h2-inner {
+        font-family: $lora;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 35px 0 20px;
+
+        span {
+          color: #ff4800;
+        }
+      }
+
+      .h3-inner {
+        font-family: "Nunito", sans-serif;
+        font-size: 20px;
+        color: #fff;
+        font-weight: lighter;
+        padding: 0 0 40px;
+      }
+
+      .review-cont {
+        color: #fff;
+        padding: 0 260px;
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+        font-weight: lighter;
+        min-height: 250px;
+
+        p {
+          min-height: 85px;
+        }
+
+        h3 {
+            display: block;
+            color: #ff4800;
+            line-height: 30px;
+            font-family: "Nunito", sans-serif;
+            font-size: 18px;
+
+          span {
+            color: #fff;
+            font-size: 16px;
+            display: block;
+            font-weight: lighter;
+          }
+        }
+      }
+
+      .carousel-indicators {
+        li {
+          background: #fff;
+          border-radius: 50%;
+          height: 15px;
+          width: 15px;
+          border-top: none;
+          border-bottom: none;
+          padding: 0;
+        }
+
+        .active {
+          background: #ff4800;
+        }
+      }
+    }
+
+    .review-2 {
+      background: url("../images/review-2.jpg");
+      background-size: cover;
+      min-height: 699px;
+
+      .h2-inner {
+        font-family: $lora;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 35px 0 20px;
+
+        span {
+          color: #8cab4c;
+        }
+      }
+
+      .h3-inner {
+        font-family: "Nunito", sans-serif;
+        font-size: 20px;
+        color: #fff;
+        font-weight: lighter;
+      }
+
+      .review-cont {
+        color: #fff;
+        padding: 0 260px;
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+        font-weight: lighter;
+        min-height: 250px;
+
+        p {
+          min-height: 115px;
+        }
+
+        h3 {
+            display: block;
+            color: #8cab4c;
+            line-height: 30px;
+            font-family: "Nunito", sans-serif;
+            font-size: 18px;
+
+          span {
+            color: #fff;
+            font-size: 16px;
+            display: block;
+            font-weight: lighter;
+          }
+        }
+      }
+
+      .carousel-indicators {
+        li {
+          background: #fff;
+          border-radius: 50%;
+          height: 15px;
+          width: 15px;
+          border-top: none;
+          border-bottom: none;
+          padding: 0;
+        }
+
+        .active {
+          background: #8cab4c;
+        }
+      }
+    }
+
+    .review-3 {
+      background: url("../images/review-3.jpg");
+      background-size: cover;
+      min-height: 699px;
+
+      .h2-inner {
+        font-family: $lora;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 35px 0 20px;
+
+        span {
+          color: #8cab4c;
+        }
+      }
+
+      .h3-inner {
+        font-family: "Nunito", sans-serif;
+        font-size: 20px;
+        color: #fff;
+        font-weight: lighter;
+      }
+
+      .review-cont {
+        color: #fff;
+        padding: 0 260px;
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+        font-weight: lighter;
+        min-height: 250px;
+
+        p {
+          min-height: 115px;
+        }
+
+        h3 {
+            display: block;
+            color: #8cab4c;
+            line-height: 30px;
+            font-family: "Nunito", sans-serif;
+            font-size: 18px;
+
+          span {
+            color: #fff;
+            font-size: 16px;
+            display: block;
+            font-weight: lighter;
+          }
+        }
+      }
+
+      .carousel-indicators {
+        li {
+          background: #fff;
+          border-radius: 50%;
+          height: 15px;
+          width: 15px;
+          border-top: none;
+          border-bottom: none;
+          padding: 0;
+        }
+
+        .active {
+          background: #8cab4c;
+        }
+      }
+    }
+
+    .review-4 {
+      background: url("../images/review-4.jpg");
+      background-size: cover;
+      min-height: 699px;
+
+      .h2-inner {
+        font-family: $lora;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 35px 0 20px;
+
+        span {
+          color: #8cab4c;
+        }
+      }
+
+      .h3-inner {
+        font-family: "Nunito", sans-serif;
+        font-size: 20px;
+        color: #fff;
+        font-weight: lighter;
+      }
+
+      .review-cont {
+        color: #fff;
+        padding: 0 260px;
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+        font-weight: lighter;
+        min-height: 250px;
+
+        p {
+          min-height: 115px;
+        }
+
+        h3 {
+            display: block;
+            color: #8cab4c;
+            line-height: 30px;
+            font-family: "Nunito", sans-serif;
+            font-size: 18px;
+
+          span {
+            color: #fff;
+            font-size: 16px;
+            display: block;
+            font-weight: lighter;
+          }
+        }
+      }
+
+      .carousel-indicators {
+        li {
+          background: #fff;
+          border-radius: 50%;
+          height: 15px;
+          width: 15px;
+          border-top: none;
+          border-bottom: none;
+          padding: 0;
+        }
+
+        .active {
+          background: #8cab4c;
+        }
+      }
+    }
+  }
+}
+
+#book-review {
+  padding: 0;
+  background: #e6e6e6;
+  width: 100%;
+
+  .book-1 {
+    background: url("../images/review-1.jpg");
+    background-size: cover;
+    padding: 88px 0;
+
+    .h2-inner {
+      font-family: $lora;
+      font-size: 40px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 35px 0 20px;
+
+      span {
+        color: #ff4800;
+      }
+    }
+
+    .h3-inner {
+      font-family: "Nunito", sans-serif;
+      font-size: 20px;
+      color: #fff;
+      font-weight: lighter;
+    }
+  }
+
+  .book-2 {
+    background: url("../images/review-2.jpg");
+    background-size: cover;
+    min-height: 699px;
+    padding: 88px 0;
+  }
+
+  .book-3 {
+    background: url("../images/review-3.jpg");
+    background-size: cover;
+    min-height: 699px;
+    padding: 88px 0;
+  }
+
+  .book-4 {
+    background: url("../images/review-4.jpg");
+    background-size: cover;
+    min-height: 699px;
+    padding: 88px 0;
+  }
+
+  .review-wrapper {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 15px;
+    min-height: 420px;
+
+    h3 {
+      color: $base-color;
+      font-size: 16px;
+      font-family: $base-font;
+      padding: 20px 0;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .review-carousel {
+    padding-top: 50px;
+
+    .carousel-inner {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .review-cont {
+      min-height: 165px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0;
+    }
+  }
+
+  .carousel-indicators {
+    margin: 0;
+    bottom: -40px;
+
+    li {
+      padding: 0;
+      background: #333;
+    }
+
+    li.active {
+      background: $color2;
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    span {
+      background-color: #333;
+      background-size: 60% auto;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @include media-breakpoint-only(lg) {
+    .review-wrapper {
+      min-height: 530px;
+    }
+
+    .review-carousel {
+      .review-cont {
+        min-height: 200px;
+      }
+
+      .carousel-inner {
+        width: 75%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .review-wrapper {
+      min-height: 0;
+    }
+
+    .review-wrap {
+      margin-top: 25px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .carousel-control-next,
+    .carousel-control-prev {
+      display: none;
+    }
+
+    .review-carousel {
+      .carousel-inner {
+        width: auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 50px 0;
+  }
+}

@@ -1,0 +1,60 @@
+#author {
+  padding: 70px 0;
+  background: #fff;
+
+  .text-cont {
+    position: relative;
+    width: 80%;
+	margin: 0 10px 0 auto;
+	
+	h2 {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 40px;
+		font-family: $lora;
+		font-weight: bold;
+	}
+
+	p {
+		font-family: "Nunito", sans-serif;
+		color: #fff;
+		font-size: 16px;
+		font-weight: lighter;
+		line-height: 36px;
+	}
+  }
+
+  .author-bg {
+	position: relative;
+	width: 800px;
+	
+	img {
+		position: absolute;
+		top: -70px;
+		width: 100%;
+	}
+  }
+  
+  .img-cont {
+    width: 445px;
+    margin: 0 auto 30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .img-cont {
+      width: 280px;
+    }
+
+    .text-cont {
+      width: auto;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 50px 0 35px;
+
+    .img-cont {
+      width: 190px;
+    }
+  }
+}
