@@ -256,7 +256,191 @@
     }
   }
 
-  @include media-breakpoint-only(md) {
+  @include media-breakpoint-down(lg) {
+    .page-1 {
+      .img-cont {
+        width: 380px;
+      }
+
+      .text-cont {
+        .hand {
+          top: 67px;
+          left: -173px;
+        }
+      }
+    }
+
+    .page-2 {
+      padding: 130px 0;
+
+      .text-cont {
+        h1 {
+          span {
+            font-size: 77px;
+            padding: 10px 0 0;
+          }
+        }
+      }
+    }
+
+    .page-3 {
+      h1 {
+        font-size: 115px;
+
+        span {
+          left: -157px;
+        }
+      }
+    }
+
+    .page-4 {
+      .img-cont {
+        width: 390px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .page-1 {
+      min-height: 640px;
+      padding: 100px 0;
+
+      .img-cont {
+        width: 300px;
+      }
+
+      .text-cont {
+        .buy-book {
+          width: 250px;
+          height: 60px;
+          line-height: 60px;
+        }
+
+        .hand {
+          top: -6px;
+          left: -231px;
+        }
+
+        h1 {
+          font-size: 16px;
+
+          span {
+            font-size: 70px;
+          }
+        }
+      }
+    }
+
+    .page-2 {
+      min-height: 640px;
+      padding: 100px 0;
+
+      .img-cont {
+        width: 300px;
+        padding-top: 55px;
+      }
+
+      .text-cont {
+        .buy-book {
+          width: 250px;
+          height: 60px;
+          line-height: 60px;
+        }
+
+        .hand {
+          top: -6px;
+          left: -231px;
+        }
+
+        h1 {
+          font-size: 18px;
+
+          span {
+            font-size: 57px;
+          }
+        }
+      }
+    }
+
+    .page-3 {
+      min-height: 640px;
+      padding: 100px 0;
+
+      .img-cont {
+        width: 300px;
+        padding-top: 55px;
+      }
+
+      .text-cont {
+        .buy-book {
+          width: 250px;
+          height: 60px;
+          line-height: 60px;
+        }
+
+        .hand {
+          top: -6px;
+          left: -231px;
+        }
+
+        h1 {
+          font-size: 89px;
+
+          span {
+            font-size: 57px;
+            left: -125px;
+            bottom: -47px;
+          }
+
+          strong {
+            padding-top: 10px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .page-4 {
+      min-height: 640px;
+      padding: 100px 0;
+
+      .img-cont {
+        width: 300px;
+        padding-top: 55px;
+      }
+
+      .text-cont {
+        .buy-book {
+          width: 250px;
+          height: 60px;
+          line-height: 60px;
+        }
+
+        .hand {
+          top: -6px;
+          left: -231px;
+        }
+
+        h1 {
+          font-size: 50px;
+          line-height: 50px;
+
+          span {
+            font-size: 55px;
+            left: -125px;
+            bottom: -47px;
+          }
+
+          strong {
+            padding-top: 15px;
+            font-size: 20px;
+            line-height: 20px;
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+
     .img-cont {
       width: auto;
     }
@@ -276,6 +460,130 @@
   }
 
   @include media-breakpoint-down(sm) {
+    .page-1 {
+      min-height: 798px;
+      
+      .img-cont {
+        width: 250px;
+      }
+
+      .text-cont {
+        h1 {
+          padding: 20px 0;
+
+          span {
+            padding: 20px 0;
+            font-size: 60px;
+          }
+        }
+
+        .hand {
+          top: 22px;
+          left: -54px;
+          transform: scale(0.5);
+        }
+      }
+    }
+
+    .page-2 {
+      min-height: 798px;
+
+      .img-cont {
+        width: 250px;
+        padding-top: 0;
+      }
+
+      .text-cont {
+        h1 {
+          padding: 20px 0 0;
+          font-size: 25px;
+
+          span {
+            padding: 20px 0;
+            font-size: 60px;
+          }
+        }
+
+        .hand {
+          top: 22px;
+          left: -54px;
+          transform: scale(0.5);
+        }
+      }
+    }
+
+    .page-3 {
+      min-height: 798px;
+
+      .img-cont {
+        width: 250px;
+        padding-top: 0;
+      }
+
+      .text-cont {
+        h1 {
+          font-size: 70px;
+          line-height: 70px;
+          text-shadow: #000 1px 0 10px;
+          padding: 15px 0;
+
+          span {
+            position: static;
+            text-align: center;
+            font-size: 50px;
+            padding: 0;
+          }
+
+          strong {
+            position: static;
+            line-height: 20px;
+            padding-bottom: 45px;
+          }
+        }
+
+        .hand {
+          top: 22px;
+          left: -54px;
+          transform: scale(0.5);
+        }
+      }
+    }
+    
+    .page-4 {
+      min-height: 798px;
+
+      .img-cont {
+        width: 250px;
+        padding-top: 0;
+      }
+
+      .text-cont {
+        .buy-book {
+          justify-content: center;
+          float: unset;
+          margin-top: 30px;
+        }
+
+        h1 {
+          padding: 20px 0 0;
+          font-size: 35px;
+          text-align: center;
+
+          span {
+            text-align: center;
+            padding: 0 0 10px;
+            font-size: 50px;
+          }
+        }
+
+        .hand {
+          top: 22px;
+          left: -54px;
+          transform: scale(0.5);
+        }
+      }
+    }
+
     .img-cont {
       width: 220px;
       margin: 0 auto 30px;
@@ -300,7 +608,125 @@
   }
 
   @include media-breakpoint-down(xs) {
-    padding: 50px 0;
+    .page-1 {
+      min-height: 681px;
+      padding: 45px 0;
+      
+      .img-cont {
+        width: 180px;
+      }
+
+      .text-cont {
+        h1 {
+          padding: 20px 0;
+
+          span {
+            padding: 20px 0;
+            font-size: 55px;
+          }
+        }
+
+        .hand {
+          top: 50px;
+          left: -120px;
+          transform: scale(0.5);
+        }
+      }
+    }
+
+    .page-2 {
+      min-height: 681px;
+      padding: 45px 0;
+
+      .img-cont {
+        width: 200px;
+        height: 286px;
+      }
+
+      .text-cont {
+        h1 {
+          padding: 20px 0 11px;
+
+          span {
+            padding: 20px 0;
+            font-size: 42px;
+          }
+        }
+
+        .hand {
+          top: 50px;
+          left: -120px;
+          transform: scale(0.5);
+        }
+      }
+    }
+
+    .page-3 {
+      min-height: 681px;
+      padding: 45px 0;
+
+      .img-cont {
+        width: 200px;
+      }
+
+      .text-cont {
+        h1 {
+          padding: 20px 0;
+
+          span {
+            padding: 20px 0 0;
+            font-size: 60px;
+            line-height: 60px;
+          }
+
+          strong {
+            padding-top: 20px;
+          }
+        }
+
+        .hand {
+          top: 50px;
+          left: -120px;
+          transform: scale(0.5);
+        }
+      }
+    }
+
+    .page-4 {
+      min-height: 681px;
+      padding: 45px 0;
+
+      .img-cont {
+        width: 200px;
+      }
+
+      .text-cont {
+        .buy-book {
+          margin-top: 62px;
+        }
+
+        h1 {
+          padding: 20px 0;
+          line-height: 35px;
+
+          span {
+            padding: 10px 0 0;
+            font-size: 45px;
+            line-height: 45px;
+          }
+
+          strong {
+            padding-top: 20px;
+          }
+        }
+
+        .hand {
+          top: 50px;
+          left: -120px;
+          transform: scale(0.5);
+        }
+      }
+    }
 
     .img-cont {
       width: 170px;
@@ -418,11 +844,11 @@
         }
 
         h3 {
-            display: block;
-            color: #ff4800;
-            line-height: 30px;
-            font-family: "Nunito", sans-serif;
-            font-size: 18px;
+          display: block;
+          color: #ff4800;
+          line-height: 30px;
+          font-family: "Nunito", sans-serif;
+          font-size: 18px;
 
           span {
             color: #fff;
@@ -430,6 +856,19 @@
             display: block;
             font-weight: lighter;
           }
+        }
+        
+        @include media-breakpoint-down(md) {
+          padding: 0 150px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding: 0 70px;
+        }
+        
+        @include media-breakpoint-down(xs) {
+          padding: 0 45px;
+          min-height: 340px;
         }
       }
 
@@ -488,11 +927,11 @@
         }
 
         h3 {
-            display: block;
-            color: #8cab4c;
-            line-height: 30px;
-            font-family: "Nunito", sans-serif;
-            font-size: 18px;
+          display: block;
+          color: #8cab4c;
+          line-height: 30px;
+          font-family: "Nunito", sans-serif;
+          font-size: 18px;
 
           span {
             color: #fff;
@@ -500,6 +939,19 @@
             display: block;
             font-weight: lighter;
           }
+        }
+        
+        @include media-breakpoint-down(md) {
+          padding: 0 150px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding: 0 70px;
+        }
+        
+        @include media-breakpoint-down(xs) {
+          padding: 0 45px;
+          min-height: 340px;
         }
       }
 
@@ -558,11 +1010,11 @@
         }
 
         h3 {
-            display: block;
-            color: #8cab4c;
-            line-height: 30px;
-            font-family: "Nunito", sans-serif;
-            font-size: 18px;
+          display: block;
+          color: #8cab4c;
+          line-height: 30px;
+          font-family: "Nunito", sans-serif;
+          font-size: 18px;
 
           span {
             color: #fff;
@@ -570,6 +1022,19 @@
             display: block;
             font-weight: lighter;
           }
+        }
+        
+        @include media-breakpoint-down(md) {
+          padding: 0 150px;
+        }
+        
+        @include media-breakpoint-down(sm) {
+          padding: 0 70px;
+        }
+        
+        @include media-breakpoint-down(xs) {
+          padding: 0 45px;
+          min-height: 340px;
         }
       }
 
@@ -628,11 +1093,11 @@
         }
 
         h3 {
-            display: block;
-            color: #8cab4c;
-            line-height: 30px;
-            font-family: "Nunito", sans-serif;
-            font-size: 18px;
+          display: block;
+          color: #8cab4c;
+          line-height: 30px;
+          font-family: "Nunito", sans-serif;
+          font-size: 18px;
 
           span {
             color: #fff;
@@ -640,6 +1105,19 @@
             display: block;
             font-weight: lighter;
           }
+        }
+
+        @include media-breakpoint-down(md) {
+          padding: 0 150px;
+        }
+        
+        @include media-breakpoint-down(sm) {
+          padding: 0 70px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          padding: 0 45px;
+          min-height: 340px;
         }
       }
 
@@ -657,6 +1135,30 @@
         .active {
           background: #8cab4c;
         }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .item {
+      img {
+        margin: 50px auto 0;
+      }
+    }
+    
+    .owl-prev {
+      width: 75px;
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+    .owl-next {
+      width: 75px;
+
+      i {
+        font-size: 30px;
       }
     }
   }

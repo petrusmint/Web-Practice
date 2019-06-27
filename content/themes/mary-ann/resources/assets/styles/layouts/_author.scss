@@ -40,6 +40,32 @@
     margin: 0 auto 30px;
   }
 
+  @include media-breakpoint-down(lg) {
+    .img-cont {
+      width: 300px;
+    }
+    
+    .text-cont {
+      width: 89%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 0;
+    
+    .text-cont {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      background: url('../images/about-author.jpg');
+      background-size: cover;
+    }
+
+    .author-bg {
+      display: none;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     .img-cont {
       width: 280px;
@@ -47,6 +73,7 @@
 
     .text-cont {
       width: auto;
+      margin: 0;
     }
   }
 

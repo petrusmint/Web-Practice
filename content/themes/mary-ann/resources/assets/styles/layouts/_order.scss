@@ -1,127 +1,243 @@
 #order {
-	padding: 70px 0;
-	
-	.book-details {
-		.img-cont {
-			margin: 0 auto 30px;
-			width: 85%;
-		}
-		
-		.book-type {
-			a {
-				font-size: 22px;
-				font-family: $heading-font;
-				text-align: center;
-				padding: 0;
-				width: 259px;
-				height: 55px;
-				line-height: 55px;
-				margin: 0 auto 10px;
-				transition: border-radius 0.5s;
-				background: #333;
-				display: block;
+  padding: 70px 0 120px;
 
-				&:hover {
-					background: darken(#333, 5%);
-				}
-			}
-		}
+  #OrderCarousel {
+    .carousel-indicators {
+      margin-right: 10%;
+      margin-left: 10%;
+      justify-content: left;
+      bottom: -70px;
 
-		.book-store {
-			padding: 30px 0 0;
-			text-align: center;
-			
-			span {
-				font-size: 18px;
-				display: block;
-				padding: 0 0 20px;
-				font-weight: bold;
-			}
+      li {
+        background: #739341;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        border-top: none;
+        border-bottom: none;
+        padding: 0;
+      }
+    }
+  }
 
-			a {
-				display: inline-block;
-				vertical-align: middle;
-				margin: 0 7px;
+  .excerpt-content {
+    h2 {
+      font-family: $lora;
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #ff4800;
+      font-weight: bold;
+    }
 
-				&:hover {
-					opacity: 0.7;
-					filter: alpha(opacity=70);
-				}
-			}
-		}
-	}
+    .order-green {
+      font-family: $lora;
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #8cab4c;
+      font-weight: bold;
+    }
 
-	.excerpt-carousel {
-		.carousel-indicators {
-			bottom: -30px;
-			justify-content: left;
-			margin: 0;
+    .green-title {
+      font-family: "Nunito", sans-serif;
+      font-size: 24px;
+      color: #8cab4c;
+      font-weight: bold;
+    }
 
-			li {
-				width: 18px;
-				height: 5px;
-				background: #333;
-				padding: 0;
-				margin: 0 8px 0 0;
-			}
+    .order-title {
+      font-family: "Nunito", sans-serif;
+      font-size: 24px;
+      color: #ff4800;
+      font-weight: bold;
+    }
 
-			li.active {
-				background: $color2;
-			}
-		}
-	}
+    p {
+      font-family: "Nunito", sans-serif;
+      font-weight: lighter;
+      font-size: 16px;
+      line-height: 35px;
+    }
+  }
 
-	@include media-breakpoint-only(lg) {
-		.book-details {
-			.book-store {
-				a {
-					width: 110px;
+  .book-store {
+    padding: 30px 0 0;
 
-					&:nth-of-type(1) {
-						width: 90px;
-					}
-				}
-			}
-		}
-	}
+    .available {
+      display: block;
+      font-family: "Nunito", sans-serif;
+      padding-bottom: 30px;
+      font-weight: 400;
+    }
 
-	@include media-breakpoint-only(md) {
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 7px;
+
+      &:hover {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+    }
+  }
+
+  .book-details {
+    .img-cont {
+      margin: 0 auto 30px;
+      width: 85%;
+    }
+
+    .book-type {
+      text-align: center;
+
+      a {
+        background: linear-gradient(180deg, #ff7300, #ff4800);
+        color: #fff;
+        display: inline-block;
+        font-family: Lora, serif;
+        font-weight: 700;
+        overflow: hidden;
+        text-transform: uppercase;
+        border-radius: 35px;
+        font-size: 18px;
+        height: 75px;
+        line-height: 75px;
+        padding: 0;
+        text-align: center;
+        width: 210px;
+
+        &:hover {
+          background: linear-gradient(180deg, #ff4800, #ff7300);
+        }
+      }
+
+      .btn-green {
+        background: linear-gradient(180deg, #67893c, #8eac4d);
+        color: #fff;
+        display: inline-block;
+        font-family: Lora, serif;
+        font-weight: 700;
+        overflow: hidden;
+        text-transform: uppercase;
+        border-radius: 35px;
+        font-size: 18px;
+        height: 75px;
+        line-height: 75px;
+        padding: 0;
+        text-align: center;
+        width: 210px;
+
+        &:hover {
+          background: linear-gradient(180deg, #8eac4d, #67893c);
+        }
+      }
+    }
+  }
+
+  .excerpt-carousel {
+    .carousel-indicators {
+      bottom: -30px;
+      justify-content: left;
+      margin: 0;
+
+      li {
+        width: 18px;
+        height: 5px;
+        background: #333;
+        padding: 0;
+        margin: 0 8px 0 0;
+      }
+
+      li.active {
+        background: $color2;
+      }
+    }
+  }
+
+  @include media-breakpoint-only(lg) {
+    .book-details {
+      .book-store {
+        a {
+          width: 110px;
+
+          &:nth-of-type(1) {
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .book-details {
+      .img-cont {
+        width: auto;
+      }
+
+      .book-store {
+        a {
+          vertical-align: top;
+          margin: 0 7px 7px;
+        }
+      }
+    }
+
+    .book-store {
+      width: 500px;
+    }
+
+    #OrderCarousel {
+      .carousel-indicators {
+        margin-right: 5%;
+        margin-left: 5%;
+        justify-content: center;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    #OrderCarousel {
+      .book-details {
+        padding: 0 0 50px;
+
+        .img-cont {
+          width: 300px;
+        }
+
+        .book-type {
+          a {
+            width: 230px;
+            height: 60px;
+            line-height: 60px;
+          }
+        }
+      }
+
+      .excerpt-content {
+        text-align: center;
+      }
+
+      .book-store {
+        width: unset;
+        text-align: center;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+	#OrderCarousel {
 		.book-details {
 			.img-cont {
-				width: auto;
+			  width: 270px;
 			}
-
+	  
 			.book-store {
-				a {
-					vertical-align: top;
-    				margin: 0 7px 7px;
-				}
+			  a {
+				vertical-align: top;
+				margin: 0 7px 7px;
+			  }
 			}
-		}
+		  }
 	}
-
-	@include media-breakpoint-down(sm) {
-		.book-details {
-			padding: 0 0 50px;
-
-			.img-cont {
-				width: 300px;
-			}
-		}
-	}
-
-	@include media-breakpoint-down(xs) {
-		.book-details {
-			.img-cont {
-				width: 270px;
-			}
-
-			.book-store {
-				a {
-					vertical-align: top;
-    				margin: 0 7px 7px;
-				}
-			}
-		}
-	}
+  }
 }

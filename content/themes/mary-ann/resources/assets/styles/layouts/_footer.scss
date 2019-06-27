@@ -2,7 +2,9 @@ footer {
   padding: 0;
   overflow-x: hidden;
   text-align: center;
-  background: $bg2;
+  background: url('../images/footer.jpg');
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
 
   p.copyright {
     font-size: 15px;
@@ -78,25 +80,27 @@ footer {
   li {
     display: inline-block;
     vertical-align: top;
-    margin: 0 20px 0 0;
+    margin: 0;
     padding: 0;
     list-style-type: none;
+    transition: transform 0.15;
 
     a {
       display: inline-block;
       color: #fff;
-      border-radius: 7px;
       text-align: center;
-      width: 64px;
-      height: 64px;
-      line-height: 74px;
-      background: $bg1;
+      width: 141px;
+      height: 49px;
+      line-height: 49px;
       transition: border-radius 0.5s;
+      border: solid 1px;
+      border-radius: unset;
 
       svg,
       em {
+        padding-right: 10px;
         color: #fff;
-        font-size: 32px;
+        font-size: 20px;
         font-style: normal;
         transition: transform 0.8s ease;
       }
@@ -104,7 +108,31 @@ footer {
 
     &:hover {
       a {
-        border-radius: 50%;
+        transform: scale(1.05);
+        transition: transform 0.15;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    li {
+      a {
+        width: 120px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    li {
+      a {
+        width: 50px;
+        font-size: 0;
+        height: 50px;
+        line-height: 62px;
+        
+        em {
+          padding: 0;
+        }
       }
     }
   }
@@ -118,7 +146,7 @@ footer {
       a {
         width: 55px;
         height: 55px;
-        line-height: 62px;
+        line-height: 75px;
 
         svg,
         .fab,
@@ -136,7 +164,7 @@ footer {
       a {
         width: 45px;
         height: 45px;
-        line-height: 46px;
+        line-height: 56px;
 
         svg,
         .fas,

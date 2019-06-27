@@ -1,9 +1,10 @@
-<div class="search-cont">
-    <?php get_search_form(); ?>
-</div>
+
 <div class="blogside-wrap">
     <div class="bg-holder">
-        <div class="form-cont">
+        <div class="search-cont">
+            <?php get_search_form(); ?>
+        </div>
+        <div class="form-cont form-style">
             <h2>Contact Us</h2>
             <?php echo do_shortcode('[contact-form-7 id="4" title="Contact form"]'); ?>
         </div>
@@ -40,12 +41,13 @@
                         $content =  $content;
                    
                          echo wpautop(strip_shortcodes($content));
-                    ?>
+                    ?>  
+                        <a href="<?php echo get_home_url(); ?>/#author" class="read-more">[Read More]</a>
                     <?php endwhile; ?>
                     
                     <?php wp_reset_postdata(); ?>  
                     <div class="read-more-cont">
-                        <a href="<?php echo get_home_url(); ?>/#author" class="read-more">read more</a>
+                        
                     </div>
                 </div>
             </div>

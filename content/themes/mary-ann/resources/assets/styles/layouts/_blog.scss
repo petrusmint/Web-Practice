@@ -22,9 +22,11 @@ body.error404 {
 }
 
 .blog-content {
+  background: url("../images/blog.jpg");
+  background-size: cover;
   min-height: 900px;
   position: relative;
-  padding: 70px 0 70px;
+  padding: 0;
 
   .bg-holder {
     position: relative;
@@ -36,8 +38,11 @@ body.error404 {
     padding: 0 0 50px;
 
     h1 {
-      padding: 0 0 40px;
-      color: #2a2a2a;
+      padding: 100px 0 40px;
+      font-family: $lora;
+      font-size: 40px;
+      font-weight: bold;
+      color: #ff4800;
       text-transform: uppercase;
     }
   }
@@ -107,7 +112,6 @@ body.error404 {
   margin-top: 30px;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
 
   &:nth-of-type(1) {
     margin-top: 0;
@@ -120,6 +124,12 @@ body.error404 {
     h5,
     h6 {
       display: none;
+    }
+
+    .blog-title-a {
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #ff4800;
     }
   }
 
@@ -179,23 +189,31 @@ body.error404 {
 
   p {
     line-height: 30px;
+    display: inline;
+    font-family: $lora;
+    font-size: 16px;
   }
 
   .read-more-btn {
-    text-align: right;
+    text-align: left;
+    padding-top: 20px;
 
     .read-more {
-      width: 137px;
+      background: linear-gradient(180deg, #ff7300, #ff4800);
+      color: #fff;
+      display: inline-block;
+      font-family: Lora, serif;
+      font-weight: 700;
+      overflow: hidden;
+      text-transform: capitalize;
+      border-radius: 35px;
+      font-size: 14px;
       height: 47px;
+      line-height: 47px;
       padding: 0;
       text-align: center;
-      float: right;
-      font-size: 18px;
-      line-height: 47px;
-      text-transform: capitalize;
-      color: #fff;
-      border-radius: 7px;
-      background: #333;
+      width: 134px;
+      letter-spacing: 1px;
 
       &:hover {
         background: $color2;
@@ -223,8 +241,22 @@ body.error404 {
       }
     }
 
+    .name {
+      i {
+        &::before {
+          color: #adadad;
+        }
+      }
+    }
+
     .date {
-      margin: 0 0 0 35px;
+      margin: 0;
+
+      i {
+        &::before {
+          color: #adadad;
+        }
+      }
     }
   }
 
@@ -329,13 +361,23 @@ body.error404 {
       text-align: center;
     }
 
+    .read-more-btn {
+      text-align: center;
+    }
+
     .text-cont {
       float: none;
       width: auto;
 
+      .blog-summary {
+        text-align: center;
+      }
+
       .date-author {
+        text-align: center;
+
         span {
-          display: block;
+          display: inline-block;
           float: none !important;
           font-size: 15px;
         }
@@ -423,7 +465,7 @@ body.error404 {
         padding: 0 12px 0 0;
 
         &::before {
-          content: '\f105';
+          content: "\f105";
           left: auto;
           right: 0;
         }
@@ -438,7 +480,7 @@ body.error404 {
         padding: 0 0 0 12px;
 
         &::before {
-          content: '\f104';
+          content: "\f104";
         }
       }
     }

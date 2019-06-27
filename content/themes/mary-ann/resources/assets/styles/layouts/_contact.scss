@@ -1,9 +1,24 @@
 #contact {
 	padding: 70px 0;
-    background: #e6e6e6;
+	background: url('../images/contact.jpg');
+	background-size: cover;
 	
+	h2 {
+		font-family: $lora;
+		font-size: 40px;
+		font-weight: bold;
+		color: #fff;
+
+		span {
+			color: #ff4800;
+		}
+	}
+
 	.text-social-cont {
 		p {
+			color: #fff;
+			font-family: "Nunito", sans-serif;
+			font-weight: lighter;
 			padding: 0 0 40px;
 		}
 	}

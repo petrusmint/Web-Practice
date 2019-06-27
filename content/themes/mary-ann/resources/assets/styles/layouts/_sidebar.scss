@@ -1,16 +1,25 @@
 .blogside-wrap {
 	padding: 11px;
-	background: #eaeaea;
-	border-radius: 7px;
+	background: #fff;
 
 	.bg-holder {
 		border-radius: 7px;
-		background: #333;
-		padding: 20px;
+		background: #fff;
+		padding: 0;
 	}
 	
 	.search-cont {
 		margin: 0 0 15px;
+	}
+
+	.form-style {
+		background: #ff4800;
+		padding: 11px;
+
+		h2 {
+			font-family: 'Roboto', sans-serif;
+			font-weight: bold;
+		}
 	}
 
 	.author-maincont {
@@ -18,7 +27,6 @@
 	    background: #fff;
 	    padding: 15px;
 	    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
-	    border-radius: 7px;
 
 		.author-cont {
 			display: table;
@@ -47,19 +55,26 @@
 				text-align: left;
 				padding: 0 0 0 15px;
 
+				a {
+					font-weight: bold;
+				}
+
 				h3 {
-					font-size: 16px;
+					font-size: 15px;
 					padding: 0 0 10px;
-					font-weight: normal;
-					color: #2e2e2e;
-					font-family: $base-font;
+					font-weight: bold;
+					color: #ff4800;
+					font-family: 'Roboto', sans-serif;
 				}
 
 				p {
 					padding: 0;
-					font-size: 15px;
+					font-size: 12px;
+					font-weight: bold;
 					line-height: 22px;
-					color: #424242;
+					color: #555;
+					font-family: 'Roboto', sans-serif;
+					display: inline;
 
 					em {
 						font-style: normal;
@@ -86,7 +101,8 @@
 	}
 
 	.post-cont {
-		padding: 0 0 15px;
+		padding: 0 15px 15px;
+		background: #ff4800;
 
 		> figure {
 			margin: 0;
@@ -222,6 +238,11 @@
 				.text-cont {
 					display: block;
 					padding: 20px 0 0;
+					text-align: center;
+
+					p {
+						display: block;
+					}
 				}
 			}
 		}

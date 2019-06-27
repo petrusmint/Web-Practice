@@ -86,22 +86,24 @@
 	}
 
 	.comment-reply-link {
-		width: 95px;
-		height: 43px;
+	    background: linear-gradient(180deg, #ff7300, #ff4800);
+		color: #fff;
+		display: inline-block;
+		font-family: Lora, serif;
+		font-weight: 700;
+		overflow: hidden;
+		text-transform: capitalize;
+		border-radius: 35px;
+		font-size: 14px;
+		height: 47px;
+		line-height: 47px;
 		padding: 0;
-	    text-align: center;
-	    font-size: 16px;
-	    line-height: 43px;
-	    color: #fff;
-	    border-radius: 7px;
-	    text-transform: none;
-	    border: 0;
-	    display: block;
-	    background: #333;
-	    cursor: pointer;
+		text-align: center;
+		width: 134px;
+		letter-spacing: 1px;
 			
 		&:hover {
-			background: darken(#333, 5%);
+			background: linear-gradient(180deg, #ff4800, #ff7300);
 		}
 	}
 
@@ -204,20 +206,25 @@
 				margin: 20px 0 0;
 				
 				input[type="submit"] {
-					width: 160px;
-				    height: 50px;
-				    padding: 0;
-				    text-align: center;
-				    font-size: 17px;
-				    color: #fff;
-				    border-radius: 7px;
-				    text-transform: none;
-				    border: 0;
-				    background: #333;
-				    cursor: pointer;
+					background: linear-gradient(180deg, #ff7300, #ff4800);
+					color: #fff;
+					display: inline-block;
+					font-family: Lora, serif;
+					font-weight: 700;
+					overflow: hidden;
+					text-transform: capitalize;
+					border-radius: 35px;
+					font-size: 14px;
+					height: 47px;
+					line-height: 47px;
+					padding: 0;
+					text-align: center;
+					width: 134px;
+					letter-spacing: 1px;
+					border: none;
 
 					&:hover {
-						background: darken(#333, 5%);
+						background: linear-gradient(180deg, #ff4800, #ff7300);
 					}
 				}
 			}

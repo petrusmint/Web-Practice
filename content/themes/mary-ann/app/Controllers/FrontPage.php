@@ -21,6 +21,39 @@ class FrontPage extends Controller
         }
     }
 
+    private $excerptsPageId1 = 224;
+
+    public function orderFields1()
+    {
+        $result = get_post_meta($this->excerptsPageId1, 'order_fields', true);
+
+        if (!empty($result)) {
+            return $result[0];
+        }
+    }
+
+    private $excerptsPageId2 = 228;
+
+    public function orderFields2()
+    {
+        $result = get_post_meta($this->excerptsPageId2, 'order_fields', true);
+
+        if (!empty($result)) {
+            return $result[0];
+        }
+    }
+
+    private $excerptsPageId3 = 231;
+
+    public function orderFields3()
+    {
+        $result = get_post_meta($this->excerptsPageId3, 'order_fields', true);
+
+        if (!empty($result)) {
+            return $result[0];
+        }
+    }
+
     public function bookReviews()
     {
         $args = [
